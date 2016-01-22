@@ -1,0 +1,21 @@
+.wrapper {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.row {
+  text-align: center;
+}
+
+.banner-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.item-img {
+  width: 30%;
+}
+
+.item-img:hover {
+  border: 1px solid blue;
+}
