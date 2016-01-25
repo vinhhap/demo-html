@@ -1,0 +1,240 @@
+@font-face {
+  font-family: Burn;
+  src: url(../font/burn.woff);
+}
+div {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Nunito', sans-serif;
+  background-image: url("../images/bg.jpg");
+}
+.wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  display: table;
+}
+.page {
+  text-align: center;
+}
+.info, .nav, .booking {
+  float: left;
+  width: 33.33%;
+}
+.info, .nav {
+  background-image: url("../images/vert-bar3.png");
+  background-repeat: repeat-y;
+  background-position: top right;
+}
+.thick-horiz-bar {
+  background-image: url("../images/horiz-bar.png");
+  width: 780px;
+  height: 9px;
+}
+.logo {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.banner {
+  margin-bottom: 30px;
+}
+.clear {
+    float: none;
+    clear: both;
+}
+.inner-info, .inner-nav, .inner-booking {
+  margin: 20px;
+}
+.inner-info table {
+  text-align: left;
+}
+.inner-info tr > td:first-child {
+  padding-right: 10px;
+}
+.inner-info tr td {
+  font-size: 10px;
+  line-height: 20px;
+  letter-spacing: 0.2em;
+  font-weight: 300;
+}
+.inner-info h2, .inner-booking h2 {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.inner-nav ul li {
+  margin-bottom: 15px;
+}
+.inner-nav ul li a, .current, .menu {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.inner-nav ul li a:hover {
+  opacity: .5;
+}
+.inner-nav {
+  margin-top: 40px;
+  height: 240px;
+}
+.current {
+  text-decoration: underline;
+  font-weight: 700;
+  cursor: default;
+}
+.inner-booking table {
+  width: 100%;
+  margin-top: 50px;
+}
+.inner-booking table td {
+  padding-bottom: 20px;
+}
+.button {
+  background-color: #182f2a;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+}
+.time, .date, .people {
+  width: 140px;
+}
+.thin-horiz-bar {
+  background-image: url("../images/thin-horiz-bar.png");
+  width: 780px;
+  height: 7px;
+}
+#footer_left {
+  float: left;
+  padding-left: 92px;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.2em;
+  font-weight: 400;
+}
+#footer_right {
+  float: right;
+  padding-right: 91px;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.2em;
+  font-weight: 400;
+}
+.logo-text {
+  font-family: Burn, sans-serif;
+  text-decoration: none;
+  font-size: 3em;
+  color: #000;
+}
+.footer {
+  margin-bottom: 30px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.menu {
+  cursor: default;
+}
+.info:hover .inner-info {
+  transform: scale(1.2);
+}
+.info:hover .inner-info tr td {
+  font-weight: 400;
+}
+.banner img {
+  opacity: 0.7;
+}
+.banner img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+.photo-grids {
+  opacity: 0.75;
+  background: #FFF;
+  -webkit-box-shadow: 0px 0px 2px 0px rgba(150, 150, 150, 0.75);
+  -moz-box-shadow: 0px 0px 2px 0px rgba(150, 150, 150, 0.75);
+  box-shadow: 0px 0px 2px 0px rgba(150, 150, 150, 0.75);
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+.photo-grids:hover {
+  opacity: 1;
+}
+.food-img {
+  height: 150px;
+  background-size: cover !important;
+  background-position: center !important;
+  border-radius: 4px 4px 0 0;
+  border-bottom: 1px solid rgba(150, 150, 150, 0.75);
+}
+.photo-grids {
+  width: 30%;
+  float: left;
+}
+.row .photo-grids:nth-child(2) {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.round-button {
+  display:block;
+  width:50px;
+  height:50px;
+  line-height:50px;
+  border: 2px solid #f5f5f5;
+  border-radius: 50%;
+  color:#f5f5f5;
+  text-align:center;
+  background: #464646;
+  box-shadow: 0 0 3px gray;
+  font-size:20px;
+  font-weight:bold;
+  margin: 5px auto 15px auto;
+}
+.round-button:hover {
+  background: #262626;
+}
+.food-detail h3 {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding-top: 20px;
+  padding-bottom: 18px;
+}
+.des-line {
+  padding: 0 10px 5px 10px;
+  line-height: 1.4em;
+  font-weight: 100;
+}
