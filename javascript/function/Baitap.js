@@ -6,13 +6,13 @@ console.log(binhPhuong(10));
 
 //Bai Tap 2
 var binhPhuongTong = function(a, b, c) {
-  return Math.sqrt(3 * a + 2 * b - c);
+  return Math.pow(3 * a + 2 * b - c, 2);
 };
 console.log(binhPhuongTong(1, 2, 3));
 
 //Bai Tap 3
 var catChuoi = function(str) {
-  return str.substring(0, 9) + '...';
+  return str.substring(0, 10) + '...';
 };
 console.log(catChuoi("sadasdasdasdasdasdasdasdsadasdsadasdsadsadsadsadasdasdsadsadsadsdsadsadsad"));
 
@@ -20,14 +20,14 @@ console.log(catChuoi("sadasdasdasdasdasdasdasdsadasdsadasdsadsadsadsadasdasdsads
 var vietHoaChuDau = function(str) {
   return str[0].toUpperCase() + str.substring(1);
 };
-console.log(vietHoaChuDau("quan bi dep trai"));
+console.log(vietHoaChuDau("welcome to Techmaster"));
 
 //Bai Tap 5
 var soNhoNhat = function(num_arr) {
   num_arr = num_arr.sort();
   return num_arr[0];
 };
-console.log(soNhoNhat([3,5,7,1,2]));
+console.log(soNhoNhat([100, 20, 8, 1, 1, 0]));
 
 //Bai Tap 6
 var xepTen = function(hoc_vien) {
@@ -40,30 +40,22 @@ console.log(xepTen(["Nguyen Nam Quan", "Quan Nam Nguyen", "Nam Nguyen Quan"]));
 var teacher = {
   firstName: "Kim",
   lastName: "Dung",
-  age: 30,
-  say: function(){
-    return("Toi la " + this.firstName + " " + this.lastName + ", " + this.age + " tuoi.");
-  }
+  age: 30
 };
 var student = {
   firstName: "Quan",
   lastName: "Nguyen",
-  age: 20,
-  say: function(){
-    return("Toi la " + this.firstName + " " + this.lastName + ", " + this.age + " tuoi.");
-  }
+  age: 20
 };
 var parent = {
   firstName: "Bo",
   lastName: "Me",
-  age: 100,
-  say: function(){
-    return("Toi la " + this.firstName + " " + this.lastName + ", " + this.age + " tuoi.");
-  }
+  age: 100
 };
 var aboutMe = function() {
-  console.log(teacher.say());
-  console.log(student.say());
-  console.log(parent.say());
+  return("Toi la " + this.firstName + " " + this.lastName + ", " + this.age + " tuoi.");
 };
-aboutMe();
+teacher.say = student.say = parent.say = aboutMe;
+console.log(teacher.say());
+console.log(student.say());
+console.log(parent.say());
