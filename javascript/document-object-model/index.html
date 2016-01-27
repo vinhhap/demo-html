@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document Object Model</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <p id="1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis justo metus, convallis eget malesuada ullamcorper, semper ut leo. In ac quam ut felis sodales dictum vel in sem. Nunc sed neque ac ipsum dignissim tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc in tristique elit. Fusce vitae magna volutpat, mattis velit vel, fringilla justo. Maecenas venenatis ut dolor sed aliquet. Nulla cursus ornare diam, a egestas arcu fermentum quis. Nulla elementum, ex sit amet gravida pellentesque, felis mi venenatis urna, id condimentum enim lorem id ex. Nulla tincidunt vestibulum lorem, non fermentum velit mattis nec. Curabitur fringilla metus eget lorem molestie, condimentum lobortis enim sodales.</p>
+    <p id="2">Proin malesuada augue nec porttitor imperdiet. Donec sodales ultrices tincidunt. Fusce consequat dui lorem, ut ullamcorper nulla volutpat pretium. Aenean et viverra massa. Etiam vulputate viverra turpis at congue. Nam non mi vitae libero sodales hendrerit quis quis nibh. Morbi pulvinar aliquet sagittis. Etiam sapien felis, tempus nec diam nec, finibus facilisis erat. Cras venenatis ac nunc id mollis. Nulla varius congue libero, eu mattis ex venenatis nec. Donec tincidunt ligula porta finibus congue. Suspendisse a purus nunc. Vivamus consectetur dolor enim. Donec tempus et sem vel dapibus. Quisque arcu purus, bibendum ut arcu eget, laoreet porta massa. Aliquam varius efficitur nibh, eu sodales eros convallis euismod. Vestibulum pulvinar, leo non tincidunt rutrum, eros dolor consequat diam, vel ornare sem magna at est. Aliquam consectetur arcu diam, a placerat mauris semper id.</p>
+    <p id="3">Integer blandit augue porttitor nulla venenatis scelerisque. Aenean tristique mollis nulla id porta. Vestibulum sodales libero nec lectus mollis eleifend. Fusce ut efficitur sem. Morbi eget pulvinar velit. Nam at suscipit est. Phasellus placerat a sem quis laoreet. Quisque vulputate, eros sed posuere tincidunt, magna sem pulvinar arcu, at dignissim velit ipsum quis diam. Quisque id velit vel lorem lobortis vulputate finibus a sem. Praesent porttitor luctus metus. Duis vestibulum metus eu nibh gravida, ut semper augue vulputate. Nunc sit amet mi odio. Ut accumsan molestie nibh. Phasellus luctus volutpat accumsan. Nam rutrum posuere pulvinar. Ut pharetra vehicula eros, id condimentum libero tincidunt eget.</p>
+    <button type="button" onclick="changeFontSize(20);">changeFontSize</button><br>
+    <button type="button" onclick="increaseFontSize(1);">increaseFontSize</button><br>
+    <button type="button" onclick="decreaseFontSize(1);">decreaseFontSize</button><br>
+    <button type="button" onclick="changeColor();">changeColor</button><br>
+    <button type="button" onclick="changeBgColor("blue");">changeBgColor</button><br>
+    <button type="button" onclick="copyContent('1', '2');">copyContent</button>
+    <script type="text/javascript">
+      var changeFontSize = function(x) {
+        x += "px";
+        var paragraphs = document.getElementsByTagName("p");
+        for(var i = 0; i < paragraphs.length; i++) {
+          paragraphs[i].style.fontSize = x;
+        }
+      };
+      var increaseFontSize = function(paragraph) {
+        changeFontSize(20);
+        p = document.getElementById(paragraph);
+        currentFontSize = parseInt(window.getComputedStyle(p).fontSize);
+        p.style.fontSize = currentFontSize + 1 + "px";
+      };
+      var decreaseFontSize = function(paragraph) {
+        changeFontSize(20);
+        p = document.getElementById(paragraph);
+        currentFontSize =parseInt(window.getComputedStyle(p).fontSize);
+        p.style.fontSize = currentFontSize - 1 + "px";
+      };
+      var changeColor = function() {
+        document.getElementById("1").style.color = "green";
+        document.getElementById("2").style.color = "yellow";
+        document.getElementById("3").style.color = "red";
+      };
+      var changeBgColor = function(color) {
+        document.getElementsByTagName("body").style.backgroundColor = color;
+      };
+      var copyContent = function(paragraph1, paragraph2) {
+        p2 = document.getElementById(paragraph2).innerHTML;
+        document.getElementById(paragraph1).innerHTML = p2;
+      };
+    </script>
+  </body>
+</html>
