@@ -1,0 +1,41 @@
+* {
+	box-sizing: border-box;
+}
+body {
+  background: #DADFE1;
+}
+.wrap {
+	text-align: center;
+}
+.grid {
+	margin-top: 10px;
+}
+.card {
+	position: relative;
+	float: left;
+  width: 20%;
+
+}
+.front img:hover {
+ -webkit-box-shadow: 0px 0px 15px 10px rgba(255, 255, 255, .75);
+  box-shadow: 0px 0px 15px 10px rgba(255, 255, 255, .75);
+}
+.card .back {
+	-ms-transform: rotateY(180deg); /* IE 9 */
+  -webkit-transform: rotateY(180deg); /* Chrome, Safari, Opera */
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+.card .front, .card .back {
+	transition: all 0.5s;
+	backface-visibility: hidden;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.clear {
+	clear: both;
+}
