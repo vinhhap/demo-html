@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #71C6C1;
+}
+.wrapper {
+  width: 600px;
+  background: #FFF;
+  margin: 0 auto;
+  text-align: center;
+}
+input[type='text'], input[type='date'], input[type='email'], input[type='password'] {
+  width: 200px;
+}
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+.form-row:first-child {
+  margin-top: 10px;
+}
+.form-row {
+  margin-bottom: 10px;
+}
+label {
+  font-size: 1.2em;
+}
